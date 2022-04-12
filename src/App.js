@@ -1,10 +1,10 @@
-import './App.css';
+import "./App.css";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <h1 className='title'>Pokemon</h1>
-    </div>
+    <>
+      <h1>Ola</h1>
+    </>
   );
 }
 
