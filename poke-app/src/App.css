@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'pokemon-font';
+  src: url('./assets/fonts/POKEMON\ SOLID.TTF') FORMAT('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
