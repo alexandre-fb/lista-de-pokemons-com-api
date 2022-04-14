@@ -1,13 +1,13 @@
-const urlBasePokeApi = "https://pokeapi.co/api/v2";
+const urlBasePokeApi = "https://pokeapi.co/api/v2/pokemon";
 
 async function getPokemonsList(quant) {
-  const response = await fetch(`${urlBasePokeApi}/pokemon?limit=${quant}`);
+  const response = await fetch(`${urlBasePokeApi}/?limit=${quant}`);
   return response.json();
 }
 
-async function getPokemonsData(name) {
-  const response = await fetch(`${urlBasePokeApi}/pokemon/${name}`);
+async function getPokemonData(name) {
+  const response = await fetch(`${urlBasePokeApi}/${name}`);
   return response.json();
 }
 
-export { getPokemonsList, getPokemonsData };
+export { getPokemonsList, getPokemonData };

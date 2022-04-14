@@ -1,13 +1,10 @@
 import "./App.css";
-
-
+import { Home } from './pages/home'
 
 
 function App(props) {
   return (
-    <>
-      <h1>Olá</h1>
-    </>
+      <Home />
   );
 }
 
