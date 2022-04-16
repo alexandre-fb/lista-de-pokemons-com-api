@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Header } from "../components/header";
+import { Main } from "../components/main";
 import { PokemonsList } from "../components/pokemons-list"
 
 const Home = () => {
@@ -7,7 +8,9 @@ const Home = () => {
   return (
     <Container>
       <Header />
-      <PokemonsList />
+      <Main />
+        <PokemonsList />
+      
     </Container>
   );
 };
