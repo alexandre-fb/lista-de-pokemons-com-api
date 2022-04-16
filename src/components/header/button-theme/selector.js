@@ -5,13 +5,12 @@ const Selector = styled.span`
   height: 25px;
   background-color: var(--blue-logo);
   border-radius: 100%;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   transition: 100ms ease-out;
-  transform: translateX(${(props)=>props.translate}px);
+  transform: translateX(${(props)=>props.positionSelector}px);
 `;
 
 export { Selector }
