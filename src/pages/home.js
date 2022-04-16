@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <Container>
       <Header />
-      <Main />
+      <Main>
         <PokemonsList />
-      
+      </Main>
     </Container>
   );
 };

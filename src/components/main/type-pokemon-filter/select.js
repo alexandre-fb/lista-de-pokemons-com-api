@@ -7,7 +7,7 @@ const Select = styled.select.attrs({ name: "Selecione" })`
   text-align: center;
   border: none;
   font-size: 16px;
-  padding: 3px;
+  padding: 5px;
 
   option {
     background-color: #fff;
