@@ -7,4 +7,5 @@
   margin: 0;
   padding: 0;
   --blue-logo: #3D51AB;
+  box-sizing: border-box;
 }

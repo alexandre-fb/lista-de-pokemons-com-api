@@ -1,8 +1,20 @@
 import styled from "styled-components";
 
+const widthValue = {
+  mobile: 30,
+  tablet: 35,
+  desktop: 42,
+};
+
+const heightValue = {
+  mobile: widthValue.mobile * 0.7,
+  tablet: widthValue.tablet * 0.7,
+  desktop: widthValue.desktop * 0.7,
+};
+
 const Button = styled.button`
-  width: 42px;
-  height: 30px;
+  width: ${widthValue.desktop}px;
+  height: ${heightValue.desktop}px;
   border-radius: 15px;
   border: none;
   background-color: black;
@@ -12,7 +24,20 @@ const Button = styled.button`
   bottom: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 3px;
+
+  @media screen and (max-width: 769px) {
+    width: ${widthValue.tablet}px;
+    height: ${heightValue.tablet}px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @media screen and (max-width: 480px) {
+    width: ${widthValue.mobile}px;
+    height: ${heightValue.mobile}px;
+  }
 `;
 
 export { Button };

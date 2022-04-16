@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Header } from "../components/header";
-import { Divisor } from "../components/divisor";
 import { PokemonsList } from "../components/pokemons-list"
 
 const Home = () => {
@@ -8,7 +7,6 @@ const Home = () => {
   return (
     <Container>
       <Header />
-      <Divisor />
       <PokemonsList />
     </Container>
   );
