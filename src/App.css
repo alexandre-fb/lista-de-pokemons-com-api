@@ -7,8 +7,11 @@
   margin: 0;
   padding: 0;
   --blue-logo: #3D51AB;
+  --yellow-logo: #FAC705;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    list-style: none;
+    font-style: none;
 }
 

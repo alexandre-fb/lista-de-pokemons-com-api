@@ -1,7 +1,7 @@
-import { getPokemonData } from "../../services/pokemons"
+import { getPokemonData } from "../../../services/pokemons"
 import { useState, useEffect } from "react"
 
-const Card = (props) => {
+const ListOfCards = (props) => {
 
     const [ pokemonImage, setPokemonImage ] = useState()
 
@@ -21,12 +21,14 @@ const Card = (props) => {
 
     return (
         <>
-            <div>
+            
+
+            {/* <div>
                 <h1>{`Olá ${name}`}</h1>
                 <img src={image} alt="img"></img>
-            </div>
+            </div> */}
         </>
     )
 }
 
-export { Card }
+export { ListOfCards }
