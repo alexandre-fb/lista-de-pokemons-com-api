@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const HeaderContainer = styled.header`
   padding: 2%;
@@ -9,14 +9,15 @@ const HeaderContainer = styled.header`
   position: relative;
   border-bottom: 1px solid var(--blue-logo);
   margin-bottom: 50px;
+  font-family: ;
 
-  @media screen and (max-width: 769px){
+  @media screen and (max-width: 769px) {
     height: 220px;
   }
-  
-  @media screen and (max-width: 480px){
+
+  @media screen and (max-width: 480px) {
     height: 200px;
   }
 `;
 
-export { HeaderContainer }
+export { HeaderContainer };

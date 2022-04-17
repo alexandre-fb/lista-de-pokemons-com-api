@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { Header } from "../components/header";
 import { Main } from "../components/main";
 
-
 const Home = () => {
-
   return (
     <Container>
       <Header />
@@ -20,6 +18,6 @@ const Container = styled.div`
   padding: 0 10%;
   max-width: 1920px;
   margin: 0 auto;
-` 
+`;
 
 export { Home };

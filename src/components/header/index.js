@@ -1,12 +1,12 @@
 import { HeaderContainer } from "./header-container";
 import { Logo } from "../logo";
-import { ButtonTheme } from "./button-theme/button-theme";
+import { ButtonTheme } from "./button-theme";
 
 const Header = () => {
   return (
     <HeaderContainer>
-        <Logo />
-        <ButtonTheme />
+      <Logo />
+      <ButtonTheme />
     </HeaderContainer>
   );
 };

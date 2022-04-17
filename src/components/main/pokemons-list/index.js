@@ -1,10 +1,8 @@
 // import { useState, useEffect } from "react";
 // import { getPokemonsList } from "../../../services/pokemons";
-import { Container } from "./container";
+import { SectionContainer } from "../../section-container";
 import { ListOfCards } from "./list-of-cards";
-import { Card } from "./card/card";
-import { Image } from "./card/image";
-import { Name } from "./card/name";
+import { Card } from "./card";
 
 const PokemonsList = () => {
   // const [pokemonsList, setPokemonsList] = useState([]);
@@ -23,14 +21,15 @@ const PokemonsList = () => {
   let quantidadeDeCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
-    <Container>
+    <SectionContainer>
       <ListOfCards>
         {quantidadeDeCards.map((item, index) => {
           return (
-            <Card>
-              <Image />
-              <Name>Pokemon Name</Name>
-            </Card>
+            <Card key={index} />
+            // <Card key={index}>
+            //   <Image />
+            //   <Name>Pokemon Name</Name>
+            // </Card>
           );
         })}
       </ListOfCards>
@@ -43,7 +42,7 @@ const PokemonsList = () => {
           );
         })}
       </ul> */}
-    </Container>
+    </SectionContainer>
   );
 };
 
