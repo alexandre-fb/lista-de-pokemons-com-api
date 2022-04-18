@@ -1,6 +1,4 @@
-import { Container } from "./container";
-import { InputTypeText } from "./input-type-text";
-import { Select } from "./select";
+import { Container, InputTypeText, Select } from "./styles";
 
 const TypePokemonFilter = () => {
   return (

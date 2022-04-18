@@ -1,18 +1,21 @@
 import styled from "styled-components";
+import { FaRegMoon } from "react-icons/fa";
+
+//==============Button================
 
 const widthValue = {
   mobile: 30,
   tablet: 35,
-  desktop: 42,
+  desktop: 42
 };
 
 const heightValue = {
   mobile: widthValue.mobile * 0.7,
   tablet: widthValue.tablet * 0.7,
-  desktop: widthValue.desktop * 0.7,
+  desktop: widthValue.desktop * 0.7
 };
 
-const Button = styled.button`
+export const Button = styled.button`
   width: ${widthValue.desktop}px;
   height: ${heightValue.desktop}px;
   border-radius: 15px;
@@ -40,4 +43,25 @@ const Button = styled.button`
   }
 `;
 
-export { Button };
+//==============Selector================
+
+export const Selector = styled.span`
+  width: 67%;
+  height: 100%;
+  background-color: var(--blue-logo);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 100ms ease-out;
+  transform: translateX(${(props)=>props.positionXSelector}); 
+
+  &
+`;
+
+//==============MoonIcon================
+
+export const MoonIcon = styled(FaRegMoon)`
+    width: 65%;
+    color: #fff;
+`

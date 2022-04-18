@@ -1,13 +1,12 @@
-import { HeaderContainer } from "./header-container";
-import { Logo } from "../logo";
+import { Container, Logo } from "./styles";
 import { ButtonTheme } from "./button-theme";
 
 const Header = () => {
   return (
-    <HeaderContainer>
+    <Container>
       <Logo />
       <ButtonTheme />
-    </HeaderContainer>
+    </Container>
   );
 };
 

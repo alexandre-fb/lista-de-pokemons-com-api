@@ -6,7 +6,7 @@
 * {
   margin: 0;
   padding: 0;
-  --blue-logo: #3D51AB;
+  --blue-logo: #3d51ab;
   --yellow-logo: #FAC705;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -15,3 +15,11 @@
     font-style: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  max-width: 1920px;
+  margin: 0 auto;
+}

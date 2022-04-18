@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
-const ListOfCards = styled.ul`
+//==============Container================
+
+export const Container = styled.section`
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+//==============ListOfCards================
+
+export const ListOfCards = styled.ul`
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 20px;
@@ -22,5 +33,3 @@ const ListOfCards = styled.ul`
     grid-template-columns: repeat(1, auto);
   }
 `;
-
-export { ListOfCards };

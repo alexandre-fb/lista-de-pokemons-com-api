@@ -1,13 +1,11 @@
-import { CardContainer } from "./card-container";
-import { Image } from "./image";
-import { Name } from "./name";
+import { Container, Image, Name } from "./styles";
 
 const Card = () => {
   return (
-    <CardContainer>
+    <Container>
       <Image />
       <Name>Pokemon Name</Name>
-    </CardContainer>
+    </Container>
   );
 };
 

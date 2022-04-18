@@ -1,7 +1,6 @@
 // import { useState, useEffect } from "react";
 // import { getPokemonsList } from "../../../services/pokemons";
-import { SectionContainer } from "../../section-container";
-import { ListOfCards } from "./list-of-cards";
+import { Container, ListOfCards } from "./styles";
 import { Card } from "./card";
 
 const PokemonsList = () => {
@@ -21,7 +20,7 @@ const PokemonsList = () => {
   let quantidadeDeCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
-    <SectionContainer>
+    <Container>
       <ListOfCards>
         {quantidadeDeCards.map((item, index) => {
           return (
@@ -42,7 +41,7 @@ const PokemonsList = () => {
           );
         })}
       </ul> */}
-    </SectionContainer>
+    </Container>
   );
 };
 
