@@ -1,46 +1,49 @@
-// import { useState, useEffect } from "react";
-// import { getPokemonsList } from "../../../services/pokemons";
-import { Container, ListOfCards } from "./styles";
-import { Card } from "./card";
+import { useState, useEffect } from "react";
+import { getPokemonsData, getPokemonsList } from "../../../services/pokemons";
+import { Container, ListOfCards, Card, Image, Name } from "./styles";
+import { PrimaryButton } from "../../primary-button";
 
 const PokemonsList = () => {
-  // const [pokemonsList, setPokemonsList] = useState([]);
+  const [pokemonsData, setPokemonsData] = useState([]);
+  const [amountOfCards, setAmountOfCards] = useState(10);
 
-  // useEffect(() => {
-  //   const fetchPokemonsList = async () => {
-  //     const apiPokemonsList = await getPokemonsList(2);
+  useEffect(() => {
 
-  //     setPokemonsList(apiPokemonsList.results);
-  //   };
-  //   fetchPokemonsList();
-  // }, []);
+    async function fetchPokemonsData() {
+      const apiPokemonsList = await getPokemonsList(amountOfCards);
+      const promisesPokemonsData = apiPokemonsList.results.map((item) => {
+        return getPokemonsData(item.url);
+      });
+      const apiPokemonsData = await Promise.all(promisesPokemonsData);
 
-  // console.log(pokemonsList);
+      setPokemonsData(apiPokemonsData);
+    }
 
-  let quantidadeDeCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    fetchPokemonsData();
+
+  }, [amountOfCards]);
+
+  const handleButtonClick = () => {
+    setAmountOfCards(amountOfCards + 10);
+  };
 
   return (
     <Container>
       <ListOfCards>
-        {quantidadeDeCards.map((item, index) => {
+
+        {pokemonsData.map((pokemonData, index) => {
           return (
-            <Card key={index} />
-            // <Card key={index}>
-            //   <Image />
-            //   <Name>Pokemon Name</Name>
-            // </Card>
+            <Card key={index}>
+              <Image
+                src={pokemonData.sprites.other.dream_world.front_default}
+              />
+              <Name>{pokemonData.name}</Name>
+            </Card>
           );
         })}
+
       </ListOfCards>
-      {/* <ul>
-        {pokemonsList.map((item, index) => {
-          return (
-            <li key={index}>
-              <Card name={item.name} />
-            </li>
-          );
-        })}
-      </ul> */}
+      <PrimaryButton onClick={handleButtonClick}>Carregar mais</PrimaryButton>
     </Container>
   );
 };
