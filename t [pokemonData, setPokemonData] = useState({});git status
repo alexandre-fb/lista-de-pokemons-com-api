@@ -1,0 +1,83 @@
+[33mcommit 745ec1f668dc6f80a1bd7ffb405d430f780a628a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Tue Apr 19 01:08:07 2022 +0100
+
+    created connection between card list and api and created show more button functionality
+
+[33mcommit 65f6d3f2c38319b64bfe24beb318531f67361d57[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Mon Apr 18 19:15:53 2022 +0100
+
+    Reorganized component files with index.js and styles.js
+
+[33mcommit dfe33bf7945bc0d9d46c1e34169fab571dc01bbe[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Sun Apr 17 13:15:40 2022 +0100
+
+    Create the component button-show-more
+
+[33mcommit 8178d2b06a9a466edff9cb8bd1c462644f5c9c7a[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Sun Apr 17 01:04:19 2022 +0100
+
+    Create list of cards style
+
+[33mcommit b940362d4b092181474772e26714fdaffc47ded9[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Sat Apr 16 19:28:49 2022 +0100
+
+    Create responsive input type text
+
+[33mcommit bd99c4c797b89edb26850fdf3bbfc7c1f65000bc[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Sat Apr 16 19:18:03 2022 +0100
+
+    Create type pokemon filter component
+
+[33mcommit ed12dd432fec19a073cd63811c0ed1789cb3982f[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Sat Apr 16 15:45:38 2022 +0100
+
+    Created the responsive header
+
+[33mcommit ded70fc7080b08c689b7f0f106e021d1add6aaae[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Sat Apr 16 01:22:20 2022 +0100
+
+    Refatoring the header
+
+[33mcommit ba02e93a7874ad0d348a5338e9bb90fef25d41e7[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Thu Apr 14 19:29:02 2022 +0100
+
+    Create header style
+
+[33mcommit 370905d224ee5e986eccdfad3deca7e4d1f5e8de[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Wed Apr 13 02:06:15 2022 +0100
+
+    create the api connection in service/pokemons.js
+
+[33mcommit 31db3b7bfbafc51ee255bd4e257bc4b47ae37fed[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Tue Apr 12 23:28:20 2022 +0100
+
+    Organized empty folders
+
+[33mcommit 5c61b1cc542679d5cc93b755acf91321628a0027[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Tue Apr 12 19:06:43 2022 +0100
+
+    change the global directory
+
+[33mcommit 7e931bbb99c816c5cce979364a03412421a881bf[m
+Author: Alexandre Bisognin <alexandrefb.86@gmail.com>
+Date:   Tue Apr 12 19:00:40 2022 +0100
+
+    Initial commt
+
+[33mcommit 5cd62c7bc2fcd517ece7c09b6ae7da4d905337f0[m
+Author: Alexandre Foschiera Bisognin <86979690+alexandre-fb@users.noreply.github.com>
+Date:   Tue Apr 12 18:01:24 2022 +0100
+
+    Initial commit

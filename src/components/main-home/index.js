@@ -1,7 +1,7 @@
 import { TypePokemonFilter } from "./type-pokemon-filter";
 import { PokemonsList } from "./pokemons-list";
 
-const Main = () => {
+const MainHome = () => {
   return (
     <main>
       <TypePokemonFilter />
@@ -10,4 +10,4 @@ const Main = () => {
   );
 };
 
-export { Main };
+export { MainHome };

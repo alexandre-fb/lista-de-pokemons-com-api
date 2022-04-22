@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { PrimaryButton } from "../../primary-button";
+import { Title } from "../../title/title";
 
 //==============Container================
 
@@ -66,12 +68,10 @@ export const Image = styled.img`
 
 //==============Name================
 
-export const Name = styled.h2`
-  font-family: "pokemon-font", "Permanent Marker", cursive;
-  color: var(--blue-logo);
+export const Name = styled.h2.attrs({ as: Title })`
   width: 90%;
-  line-height: 35px;
-  text-align: center;
-  text-transform: capitalize;
 `;
 
+//==============ShowMoreButton================
+
+export const ShowMoreButton = styled.button.attrs({as: PrimaryButton})``
