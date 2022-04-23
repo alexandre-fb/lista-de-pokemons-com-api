@@ -1,10 +1,16 @@
 import { Container, Logo } from "./styles";
 import { ButtonTheme } from "./button-theme";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
     <Container>
-      <Logo />
+      
+        <Link to="/">
+          <Logo></Logo>
+        </Link>
+
       <ButtonTheme />
     </Container>
   );

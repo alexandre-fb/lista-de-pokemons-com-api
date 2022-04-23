@@ -13,6 +13,14 @@ export const Container = styled.header`
   border-bottom: 1px solid var(--blue-logo);
   margin-bottom: 50px;
 
+ a{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  max-width: 350px;
+  min-width: 220px;
+ }
+
   @media screen and (max-width: 769px) {
     height: 220px;
   }
@@ -25,9 +33,8 @@ export const Container = styled.header`
 //==============Logo================
 
 export const Logo = styled.h1`
-  width: 60%;
-  max-width: 350px;
-  min-width: 220px;
+  width: 100%;
+  
   height: 100%;
   background: url(${logoImage}) no-repeat center;
   background-size: contain;

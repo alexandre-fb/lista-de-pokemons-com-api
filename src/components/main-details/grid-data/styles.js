@@ -85,6 +85,7 @@ export const DataBox = styled.article`
         font-size: 0.8rem;
         margin-bottom: 10px;
         font-family: roboto;
+        text-transform: none;
       }
     }
   }

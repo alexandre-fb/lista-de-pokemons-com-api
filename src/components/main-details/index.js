@@ -1,20 +1,19 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getPokemonsData, getPokemonAbilities } from "../../services/pokemons";
 import { Container, Name, Image, ButtonBackHome } from "./styles";
 import { GridData } from "./grid-data";
 import { Loading } from "../loading";
 
 const MainDetails = () => {
+  const { name } = useParams();
+
   const [pokemonData, setPokemonData] = useState({});
   const [loading, setLoading] = useState(true);
-
-  const { name } = useParams();
 
   useEffect(() => {
     async function fetchPokemonData() {
       const apiPokemonData = await getPokemonsData(name);
-
       const listUrlAbilities = apiPokemonData.abilities.map(
         (item) => item.ability.url
       );
@@ -37,8 +36,10 @@ const MainDetails = () => {
 
       setLoading(false);
     }
+    window.scrollTo(0, 0);
     fetchPokemonData();
   }, []);
+  console.log(pokemonData);
 
   return (
     <Container>
@@ -49,7 +50,9 @@ const MainDetails = () => {
           <Name>{pokemonData.name}</Name>
           <Image src={pokemonData.imageOfficialArtwork} alt="imagem" />
           <GridData pokemonData={pokemonData} />
-          <ButtonBackHome>Voltar para Home</ButtonBackHome>
+          <Link to="/">
+            <ButtonBackHome>Voltar para Home</ButtonBackHome>
+          </Link>
         </>
       )}
     </Container>

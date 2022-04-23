@@ -9,9 +9,10 @@ import {
   ShowMoreButton,
 } from "./styles";
 import { Loading } from "../../loading";
+import { Link } from "react-router-dom";
 
 const PokemonsList = () => {
-  const [pokemonsData, setPokemonsData] = useState([]);
+  const [listPokemonsData, setListPokemonsData] = useState([]);
   const [amountOfCards, setAmountOfCards] = useState(10);
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +25,15 @@ const PokemonsList = () => {
 
       const apiPokemonsData = await Promise.all(promisesPokemonsData);
 
-      setPokemonsData(apiPokemonsData);
+      setListPokemonsData({
+        pokemons: apiPokemonsData.map((pokemon) => {
+          return {
+            name: pokemon.name,
+            imageDreamWorld: pokemon.sprites.other.dream_world.front_default,
+          };
+        }),
+      });
+
       setLoading(false);
     }
 
@@ -42,14 +51,14 @@ const PokemonsList = () => {
       ) : (
         <>
           <ListOfCards>
-            {pokemonsData.map((pokemonData, index) => {
+            {listPokemonsData.pokemons.map((pokemon, index) => {
               return (
                 <Card key={index}>
-                  <Image
-                    src={pokemonData.sprites.other.dream_world.front_default}
-                  />
-                  <Name>{pokemonData.name}</Name>
-                </Card>
+                    <Link to={`/pokemon/${pokemon.name}`}>
+                    <Image src={pokemon.imageDreamWorld} />
+                    <Name>{pokemon.name}</Name>
+                </Link>
+                  </Card>
               );
             })}
           </ListOfCards>

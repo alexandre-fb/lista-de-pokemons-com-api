@@ -44,10 +44,6 @@ export const Card = styled.li`
   height: 220px;
   border: 1px solid var(--yellow-logo);
   box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   cursor: pointer;
   transition: all 200ms ease;
 
@@ -55,14 +51,24 @@ export const Card = styled.li`
     transform: scale(1.05);
     box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.15);
   }
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
 `;
 
 //==============Image================
 
 export const Image = styled.img`
-  src: url(${props => props.src});
+  src: url(${(props) => props.src});
   width: 80%;
-  height:45%;
+  height: 45%;
   object-fit: contain;
 `;
 
@@ -74,4 +80,4 @@ export const Name = styled.h2.attrs({ as: Title })`
 
 //==============ShowMoreButton================
 
-export const ShowMoreButton = styled.button.attrs({as: PrimaryButton})``
+export const ShowMoreButton = styled.button.attrs({ as: PrimaryButton })``;
