@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Title } from "../title/title";
+import { Title } from "../title/index.js";
 import { PrimaryButton } from "../primary-button";
 
 //==============Container================
@@ -8,18 +8,15 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-height: 100%;
-  
-`;
+  height: 100%;
 
-
-export const Image = styled.img`
-    src: url(${props => props.src});
+  img {
     width: 50%;
     max-width: 450px;
     min-width: 200px;
     margin-bottom: 50px;
-    `
+  }
+`;
 
 //==============Name================
 

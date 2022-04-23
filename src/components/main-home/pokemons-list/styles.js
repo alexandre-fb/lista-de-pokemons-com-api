@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PrimaryButton } from "../../primary-button";
-import { Title } from "../../title/title";
+import { Title } from "../../title/";
 
 //==============Container================
 
@@ -59,17 +59,16 @@ export const Card = styled.li`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
   }
-`;
 
-//==============Image================
+  img {
+    src: url(${(props) => props.src});
+    width: 80%;
+    height: 45%;
+    object-fit: contain;
+  }
 
-export const Image = styled.img`
-  src: url(${(props) => props.src});
-  width: 80%;
-  height: 45%;
-  object-fit: contain;
+
 `;
 
 //==============Name================

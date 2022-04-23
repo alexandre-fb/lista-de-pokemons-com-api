@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
 import { getPokemonsData, getPokemonsList } from "../../../services/pokemons";
-import {
-  Container,
-  ListOfCards,
-  Card,
-  Image,
-  Name,
-  ShowMoreButton,
-} from "./styles";
-import { Loading } from "../../loading";
 import { Link } from "react-router-dom";
+import { Loading } from "../../loading";
+import { Container, ListOfCards, Card, Name, ShowMoreButton } from "./styles";
+
 
 const PokemonsList = () => {
   const [listPokemonsData, setListPokemonsData] = useState([]);
@@ -19,8 +13,8 @@ const PokemonsList = () => {
   useEffect(() => {
     async function fetchPokemonsData() {
       const apiPokemonsList = await getPokemonsList(amountOfCards);
-      const promisesPokemonsData = apiPokemonsList.results.map((item) => {
-        return getPokemonsData(item.name);
+      const promisesPokemonsData = apiPokemonsList.results.map((pokemon) => {
+        return getPokemonsData(pokemon.name);
       });
 
       const apiPokemonsData = await Promise.all(promisesPokemonsData);
@@ -29,7 +23,7 @@ const PokemonsList = () => {
         pokemons: apiPokemonsData.map((pokemon) => {
           return {
             name: pokemon.name,
-            imageDreamWorld: pokemon.sprites.other.dream_world.front_default,
+            image: pokemon.sprites.other.dream_world.front_default,
           };
         }),
       });
@@ -54,11 +48,11 @@ const PokemonsList = () => {
             {listPokemonsData.pokemons.map((pokemon, index) => {
               return (
                 <Card key={index}>
-                    <Link to={`/pokemon/${pokemon.name}`}>
-                    <Image src={pokemon.imageDreamWorld} />
+                  <Link to={`/pokemon/${pokemon.name}`}>
+                    <img src={pokemon.image} alt={`${pokemon.name}`} />
                     <Name>{pokemon.name}</Name>
-                </Link>
-                  </Card>
+                  </Link>
+                </Card>
               );
             })}
           </ListOfCards>

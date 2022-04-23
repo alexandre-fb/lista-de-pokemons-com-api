@@ -16,7 +16,6 @@ const ButtonTheme = () => {
       <Button onClick={hadleClick}>
         <Selector positionXSelector={positionXSelector}>
           <MoonIcon />
-          {/* <FaRegMoon style={{ width: "65%", heigth: "65%", color: "#fff" }} /> */}
         </Selector>
       </Button>
     </>

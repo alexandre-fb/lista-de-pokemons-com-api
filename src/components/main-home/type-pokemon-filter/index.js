@@ -1,14 +1,14 @@
-import { Container, InputTypeText, Select } from "./styles";
+import { Container } from "./styles";
 
 const TypePokemonFilter = () => {
   return (
     <Container>
-      <InputTypeText />
+      <input type="text" placeholder="Digite o tipo de pokemon" />
       <p>ou</p>
-      <Select>
+      <select>
         <option>Selecione</option>
         <option>Type</option>
-      </Select>
+      </select>
     </Container>
   );
 };

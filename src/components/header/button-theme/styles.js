@@ -6,13 +6,13 @@ import { FaRegMoon } from "react-icons/fa";
 const widthValue = {
   mobile: 30,
   tablet: 35,
-  desktop: 42
+  desktop: 42,
 };
 
 const heightValue = {
   mobile: widthValue.mobile * 0.7,
   tablet: widthValue.tablet * 0.7,
-  desktop: widthValue.desktop * 0.7
+  desktop: widthValue.desktop * 0.7,
 };
 
 export const Button = styled.button`
@@ -54,14 +54,12 @@ export const Selector = styled.span`
   justify-content: center;
   align-items: center;
   transition: transform 100ms ease-out;
-  transform: translateX(${(props)=>props.positionXSelector}); 
-
-  &
+  transform: translateX(${(props) => props.positionXSelector});
 `;
 
 //==============MoonIcon================
 
 export const MoonIcon = styled(FaRegMoon)`
-    width: 65%;
-    color: #fff;
-`
+  width: 65%;
+  color: #fff;
+`;

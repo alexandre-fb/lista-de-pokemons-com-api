@@ -1,20 +1,21 @@
-import { Container, DataBox } from "./styles";
+import { Container, DataBox, Title, MovesContent } from "./styles";
 
 const GridData = ({ pokemonData }) => {
   return (
     <Container>
-
       <DataBox className="types">
-        <h3>Tipo</h3>
+        <Title>Tipo</Title>
         <ul>
           {pokemonData.types.map((item, index) => (
-            <li key={index}>{item.type.name}</li>
+            <li key={index}>
+              <h4>{item.type.name}</h4>
+            </li>
           ))}
         </ul>
       </DataBox>
 
       <DataBox className="abilities">
-        <h3>Habilidades</h3>
+        <Title>Habilidades</Title>
         <ul>
           {pokemonData.abilities.map((ability, index) => {
             return (
@@ -28,16 +29,15 @@ const GridData = ({ pokemonData }) => {
       </DataBox>
 
       <DataBox className="moves">
-        <h3>Movimentos</h3>
-        <p>
+        <Title>Movimentos</Title>
+        <MovesContent>
           {pokemonData.moves.map((item, index) => {
             return index === pokemonData.moves.length - 1
               ? `${item.move.name}.`
               : `${item.move.name}, `;
           })}
-        </p>
+        </MovesContent>
       </DataBox>
-      
     </Container>
   );
 };

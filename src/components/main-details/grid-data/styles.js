@@ -36,7 +36,6 @@ export const Container = styled.section`
 
 export const DataBox = styled.article`
   width: 100%;
-  /* height: 200px; */
   border: 1px solid var(--blue-logo);
   position: relative;
   padding: 30px 20px 20px 20px;
@@ -44,25 +43,6 @@ export const DataBox = styled.article`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  h3 {
-    width: 125px;
-    height: 40px;
-    background: url(${imageBackgroundTitle}) no-repeat center;
-    background-size: contain;
-    position: absolute;
-    top: -19px;
-    font-family: "Mansalva", cursive;
-    text-align: center;
-    line-height: 36px;
-  }
-
-  p {
-    font-family: "Mansalva", cursive;
-    font-size: 1.1rem;
-    text-align: center;
-    text-transform: capitalize;
-  }
 
   ul {
     display: flex;
@@ -72,13 +52,12 @@ export const DataBox = styled.article`
     justify-content: center;
 
     li {
-      font-family: "Mansalva", cursive;
-      font-size: 1.1rem;
       text-align: center;
-      text-transform: capitalize;
 
       h4 {
         font-family: "Mansalva", cursive;
+        font-size: 1.1rem;
+        text-transform: capitalize;
       }
 
       p {
@@ -89,4 +68,23 @@ export const DataBox = styled.article`
       }
     }
   }
+`;
+
+export const Title = styled.h3`
+  width: 125px;
+  height: 40px;
+  background: url(${imageBackgroundTitle}) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: -19px;
+  font-family: "Mansalva", cursive;
+  text-align: center;
+  line-height: 36px;
+`;
+
+export const MovesContent = styled.p`
+  font-family: "Mansalva", cursive;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: capitalize;
 `;
