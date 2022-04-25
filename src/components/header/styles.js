@@ -9,13 +9,14 @@ export const Container = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
-  border-bottom: 1px solid var(--blue-logo);
+  border-bottom: 1px solid ${({ themeData }) => themeData.colors.blueToYellow};
   margin-bottom: 50px;
 
   a {
     width: 60%;
-    height: 100%;
+    height: 50%;
     display: flex;
     max-width: 350px;
     min-width: 220px;
@@ -34,7 +35,6 @@ export const Container = styled.header`
 
 export const Logo = styled.h1`
   width: 100%;
-  height: 100%;
   background: url(${logoImage}) no-repeat center;
   background-size: contain;
   transition: transform 200ms ease;

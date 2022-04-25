@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FaRegMoon } from "react-icons/fa";
 
 //==============Button================
 
@@ -20,7 +19,8 @@ export const Button = styled.button`
   height: ${heightValue.desktop}px;
   border-radius: 15px;
   border: none;
-  background-color: black;
+  background-color: ${({ themeData }) => themeData.colors.blackToWhite};
+  /* background-color: black; */
   cursor: pointer;
   position: absolute;
   right: 0;
@@ -54,12 +54,19 @@ export const Selector = styled.span`
   justify-content: center;
   align-items: center;
   transition: transform 100ms ease-out;
-  transform: translateX(${(props) => props.positionXSelector});
+  transform: translateX(${({ themeData }) => themeData.positionXSelector});
+  color: #fff;
+
 `;
 
-//==============MoonIcon================
+//==============Icon================
 
-export const MoonIcon = styled(FaRegMoon)`
+ export const Icon = styled.i`
+ display: flex;
+ justify-content: center;
+ align-items: center;
   width: 65%;
   color: #fff;
-`;
+  
+`; 
+

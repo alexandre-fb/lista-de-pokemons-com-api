@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PrimaryButton } from "../../primary-button";
-import { Title } from "../../title/";
+import { Title } from "../../title";
 
 //==============Container================
 
@@ -67,14 +67,13 @@ export const Card = styled.li`
     height: 45%;
     object-fit: contain;
   }
-
-
 `;
 
 //==============Name================
 
 export const Name = styled.h2.attrs({ as: Title })`
   width: 90%;
+  color: ${({ themeData }) => themeData.colors.blueToYellow}
 `;
 
 //==============ShowMoreButton================

@@ -1,11 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { getPokemonsData, getPokemonsList } from "../../../services/pokemons";
+import { ThemeContext } from "../../../contexts/theme-context";
 import { Link } from "react-router-dom";
 import { Loading } from "../../loading";
 import { Container, ListOfCards, Card, Name, ShowMoreButton } from "./styles";
 
 
 const PokemonsList = () => {
+
+  const { themeData } = useContext(ThemeContext)
+
   const [listPokemonsData, setListPokemonsData] = useState([]);
   const [amountOfCards, setAmountOfCards] = useState(10);
   const [loading, setLoading] = useState(true);
@@ -50,7 +54,7 @@ const PokemonsList = () => {
                 <Card key={index}>
                   <Link to={`/pokemon/${pokemon.name}`}>
                     <img src={pokemon.image} alt={`${pokemon.name}`} />
-                    <Name>{pokemon.name}</Name>
+                    <Name themeData={themeData}>{pokemon.name}</Name>
                   </Link>
                 </Card>
               );

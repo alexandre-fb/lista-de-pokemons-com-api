@@ -23,6 +23,7 @@ export const Container = styled.main`
 export const Name = styled.h2.attrs({ as: Title })`
   font-size: 2rem;
   margin-bottom: 50px;
+  color: ${({ themeData }) => themeData.colors.blueToYellow}
 `;
 
 //==============ButtonBackHome================

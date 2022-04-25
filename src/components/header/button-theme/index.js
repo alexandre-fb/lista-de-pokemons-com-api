@@ -1,21 +1,23 @@
-import { useState } from "react";
-import { Button, Selector, MoonIcon } from './styles.js'
-
-
+import { useContext } from "react";
+import { ThemeContext } from "../../../contexts/theme-context.js";
+import { Button, Selector, Icon } from './styles.js';
 
 const ButtonTheme = () => {
   
-  const [ positionXSelector, setPositionXSelector] = useState('-20%');
+  const { themeData, changeTheme } = useContext(ThemeContext)
+  console.log(themeData)
 
-  const hadleClick = () => {
-    setPositionXSelector(positionXSelector === '-20%' ? '20%' : '-20%');
+  const handleClick = () => {
+    changeTheme()
   };
 
   return (
     <>
-      <Button onClick={hadleClick}>
-        <Selector positionXSelector={positionXSelector}>
-          <MoonIcon />
+      <Button onClick={ handleClick } themeData={themeData}>
+        <Selector themeData={themeData}>
+          <Icon>
+            {themeData.icon}
+          </Icon>
         </Selector>
       </Button>
     </>

@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
+import { ThemeContext } from "../../contexts/theme-context";
 import { getPokemonsData, getPokemonAbilities } from "../../services/pokemons";
 import { Container, Name, ButtonBackHome } from "./styles";
 import { GridData } from "./grid-data";
 import { Loading } from "../loading";
 
 const MainDetails = () => {
+  const { themeData } = useContext(ThemeContext)
   const { name } = useParams();
 
   const [pokemonData, setPokemonData] = useState({});
@@ -37,7 +39,7 @@ const MainDetails = () => {
 
     window.scrollTo(0, 0);
     fetchPokemonData();
-  }, []);
+  }, [name]);
 
   return (
     <Container>
@@ -45,7 +47,7 @@ const MainDetails = () => {
         <Loading />
       ) : (
         <>
-          <Name>{pokemonData.name}</Name>
+          <Name themeData={themeData}>{pokemonData.name}</Name>
           <img src={pokemonData.image} alt={pokemonData.name} />
           <GridData pokemonData={pokemonData} />
           <Link to="/">

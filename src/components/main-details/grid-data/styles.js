@@ -36,13 +36,14 @@ export const Container = styled.section`
 
 export const DataBox = styled.article`
   width: 100%;
-  border: 1px solid var(--blue-logo);
+  border: 1px solid ${({ themeData }) => themeData.colors.blueToYellow};
   position: relative;
   padding: 30px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 
   ul {
     display: flex;
@@ -50,9 +51,13 @@ export const DataBox = styled.article`
     justify-content: center;
     align-items: center;
     justify-content: center;
+     
 
     li {
       text-align: center;
+      color: ${({ themeData }) => themeData.colors.blackToWhite};
+      
+      
 
       h4 {
         font-family: "Mansalva", cursive;
@@ -65,6 +70,7 @@ export const DataBox = styled.article`
         margin-bottom: 10px;
         font-family: roboto;
         text-transform: none;
+        
       }
     }
   }
@@ -87,4 +93,5 @@ export const MovesContent = styled.p`
   font-size: 1rem;
   text-align: center;
   text-transform: capitalize;
+  color: ${({ themeData }) => themeData.colors.blackToWhite};
 `;

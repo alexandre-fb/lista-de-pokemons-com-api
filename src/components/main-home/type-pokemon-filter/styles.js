@@ -15,15 +15,20 @@ export const Container = styled.section`
 
   input {
     border: 1px solid var(--blue-logo);
-    background-color: #efefef;
+    background-color: ${({ themeData }) => themeData.colors.whiteToBlack};
     width: 200px;
     text-align: center;
     padding: 5px;
     font-size: 16px;
+    color: ${({ themeData }) => themeData.colors.blackToWhite};
 
     ::placeholder {
       color: #666;
     }
+  }
+
+  p {
+    color: ${({ themeData }) => themeData.colors.blackToWhite}
   }
 
   select {
@@ -43,4 +48,3 @@ export const Container = styled.section`
     }
   }
 `;
-
