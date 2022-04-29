@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Lista de pokemons usando a Poke Api
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto faz parte do desafio final do curso DevQuest simulando um teste técnico de processo seletivo.
 
-## Available Scripts
+O projeto foi criado sem a ajuda dos professores, que darão o feedback quando finalizado.
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## Técnologias e ferramentas utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Figma;
+- Poke Api;
+- HTML;
+- CSS;
+- JavaScript;
+- Fetch Api
+- ReactJS;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Hooks (useState, useEffect, useContext);
+  - Styled Components.
+  - React Router DOM
 
-### `npm test`
+    <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Demandas
 
-### `npm run build`
+- Criar uma Home (página inicial) de listagem de alguns pokemons,utilizando a api
+  https://pokeapi.co/
+- Criar uma página interna de detalhe do pokemon.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- A home deve apresentar uma listagem com 10 pokemonsiniciais.
+- A home deve ter um botão "Carregar mais" abaixo dessa lista,que quando clicado deve buscar mais 10 pokemons e adicionara listagem atual.
+- Essa listagem deve mostrar a imagem e nome de cada pokemon. - Na listagem cada
+  pokemon deve ser clicável e ao clicar o usuáriodeve poder acessar uma página interna desse pokemon cominformações detalhadas, nessa página de detalhes devemaparecer as seguintes informações: - Imagem do pokemon - Nome - Lista de movimentos do pokemon (moves) - Lista de habilidades do pokemon (abilities) - a lista de habilidades deve apresentar o nome e o textodescritivo da habilidade - Tipo do pokemon (type)
+- Essa home deve ter um botão para que o usuário possaalternar de cor entre tema claro e tema escuro (light/dark)
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Requisitos técnicos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- A aplicação deverá ser Single Page Application (SPA);
+- Utilizar React.js para o desenvolvimento daaplicação;
+- Utilizar Context API para criação do Theme Toggler(Alternador entre tema claro e escuro);
+- Utilizar styled-components para estilização doscomponentes;
+- Utilizar react-router-dom para a navegação entre aspáginas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Layout
 
-## Learn More
+- A criação do layout é livre.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Desafios encontrados
 
-### Code Splitting
+## Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+O primeiro desafio que encontrei foi de organizar as informações e o layout. Meu primeiro passo foi partir para o Figma e criar as versões desktop, mobile, dark e light.
 
-### Analyzing the Bundle Size
+O projeto do Figma pode ser acessado 👉 [aqui.](https://exemplo.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br>
 
-### Making a Progressive Web App
+## Conexão com a Api
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+No início foi um pouco difícil até entender a dinâmica dos dados. Busquei informações na documentação, e, como é uma Api bastante usada, também tinha muita informação na internet. Depois de entendida a lógica dos dados foi só criar as conexões com Fetch.
 
-### Advanced Configuration
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Organização dos componentes
 
-### Deployment
+A estilização dos componentes foi feita com Styled Components, então fui buscando maneira de melhor organizar as pastaa e arquivos ao longo do projeto. Decidi usar como padrão uma pasta para cada componente com um arquivo 'index.js' e um 'styles.js' dentro.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br>
 
-### `npm run build` fails to minify
+# Andamento do projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+O projeto encontra-se com os requisitos básicos prontos. A meta é ainda implementar a funcionalidade de filtrar por tipo de pokemon.
