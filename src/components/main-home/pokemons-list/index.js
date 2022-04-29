@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Loading } from "../../loading";
 import { Container, ListOfCards, Card, Name, ShowMoreButton } from "./styles";
 
-
 const PokemonsList = () => {
 
   const { themeData } = useContext(ThemeContext)
@@ -16,8 +15,8 @@ const PokemonsList = () => {
 
   useEffect(() => {
     async function fetchPokemonsData() {
-      const apiPokemonsList = await getPokemonsList(amountOfCards);
-      const promisesPokemonsData = apiPokemonsList.results.map((pokemon) => {
+      const apiGeneralPokemonsData = await getPokemonsList(amountOfCards);
+      const promisesPokemonsData = apiGeneralPokemonsData.results.map((pokemon) => {
         return getPokemonsData(pokemon.name);
       });
 

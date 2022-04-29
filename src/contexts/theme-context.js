@@ -29,14 +29,10 @@ export const ThemeContext = createContext({});
 
 export const ThemeProvider = (props) => {
   const [themeData, setThemeData] = useState(themes.light);
-  // const [positionXSelector, setPositionXSelector] = useState("-20%");
 
   const changeTheme = () => {
     setThemeData(themeData === themes.dark ? themes.light : themes.dark);
   };
-
-  // const changePositionXSelector = () =>
-  //   setPositionXSelector(positionXSelector === "-20%" ? "20%" : "-20%");
 
   return (
     <ThemeContext.Provider
@@ -44,8 +40,6 @@ export const ThemeProvider = (props) => {
         themeData,
         setThemeData,
         changeTheme,
-        // positionXSelector,
-        // changePositionXSelector,
       }}
     >
       {props.children}

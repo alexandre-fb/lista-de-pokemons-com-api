@@ -10,8 +10,8 @@ const MainDetails = () => {
   const { themeData } = useContext(ThemeContext)
   const { name } = useParams();
 
-  const [pokemonData, setPokemonData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [ pokemonData, setPokemonData ] = useState({});
+  const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
     async function fetchPokemonData() {
@@ -42,20 +42,20 @@ const MainDetails = () => {
   }, [name]);
 
   return (
-    <Container>
+    <>
       {loading ? (
         <Loading />
       ) : (
-        <>
+        <Container>
           <Name themeData={themeData}>{pokemonData.name}</Name>
           <img src={pokemonData.image} alt={pokemonData.name} />
           <GridData pokemonData={pokemonData} />
           <Link to="/">
             <ButtonBackHome>Voltar para Home</ButtonBackHome>
           </Link>
-        </>
+        </Container>
       )}
-    </Container>
+    </>
   );
 };
 

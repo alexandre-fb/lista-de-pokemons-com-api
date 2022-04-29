@@ -8,23 +8,9 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 769px) {
     flex-direction: column;
-    gap: 5px;
-  }
-
-  input {
-    border: 1px solid var(--blue-logo);
-    background-color: ${({ themeData }) => themeData.colors.whiteToBlack};
-    width: 200px;
-    text-align: center;
-    padding: 5px;
-    font-size: 16px;
-    color: ${({ themeData }) => themeData.colors.blackToWhite};
-
-    ::placeholder {
-      color: #666;
-    }
+    gap: 10px;
   }
 
   p {

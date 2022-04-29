@@ -43,35 +43,22 @@ export const DataBox = styled.article`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-     
+  li {
+    text-align: center;
+    color: ${({ themeData }) => themeData.colors.blackToWhite};
 
-    li {
-      text-align: center;
-      color: ${({ themeData }) => themeData.colors.blackToWhite};
-      
-      
+    h4 {
+      font-family: "Mansalva", cursive;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+    }
 
-      h4 {
-        font-family: "Mansalva", cursive;
-        font-size: 1.1rem;
-        text-transform: capitalize;
-      }
-
-      p {
-        font-size: 0.8rem;
-        margin-bottom: 10px;
-        font-family: roboto;
-        text-transform: none;
-        
-      }
+    p {
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+      font-family: roboto;
+      text-transform: none;
     }
   }
 `;

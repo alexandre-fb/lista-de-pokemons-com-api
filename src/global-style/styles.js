@@ -1,7 +1,7 @@
-import { createGlobalStyle  } from 'styled-components';
-import PokemonFont from './assets/fonts/pokemon-font.ttf'
+import { createGlobalStyle } from "styled-components";
+import PokemonFont from "../assets/fonts/pokemon-font.ttf";
 
-export const GlobalStyle = createGlobalStyle`
+export const Styles = createGlobalStyle`
 
 @font-face {
   font-family: 'pokemon-font';
@@ -26,14 +26,13 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 1920px;
   margin: 0 auto;
+  background-color: ${({ themeData }) => themeData.colors.whiteToBlack};
+  padding: 0 10%;
 }
 
 a {
   text-decoration: none;
 }
-`
+`;

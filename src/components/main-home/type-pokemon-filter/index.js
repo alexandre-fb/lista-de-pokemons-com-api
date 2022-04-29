@@ -1,18 +1,17 @@
 import { Container } from "./styles";
-import { useContext } from 'react';
+import { useContext } from "react";
 import { ThemeContext } from "../../../contexts/theme-context";
 
 const TypePokemonFilter = () => {
-
-  const { themeData } = useContext(ThemeContext)
+  const { themeData } = useContext(ThemeContext);
 
   return (
     <Container themeData={themeData}>
-      <input type="text" placeholder="Digite o tipo de pokemon" />
-      <p>ou</p>
+      <p>Selecione o tipo de pokemon:</p>
       <select>
-        <option>Selecione</option>
-        <option>Type</option>
+        <option>Todos</option>
+        <option>Type1</option>
+        <option>Type2</option>
       </select>
     </Container>
   );

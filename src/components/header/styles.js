@@ -15,8 +15,8 @@ export const Container = styled.header`
   margin-bottom: 50px;
 
   a {
-    width: 60%;
-    height: 50%;
+    width: 70%;
+    height: 65%;
     display: flex;
     max-width: 350px;
     min-width: 220px;
