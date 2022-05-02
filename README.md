@@ -6,7 +6,7 @@ O projeto foi criado sem a ajuda dos professores, que darão o feedback quando f
 
 <br>
 
-## Técnologias e ferramentas utilizadas
+## Tecnologias e ferramentas utilizadas
 
 - Figma;
 - Poke Api;
