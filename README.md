@@ -2,7 +2,7 @@
 
 Este projeto faz parte do desafio final do curso DevQuest simulando um teste técnico de processo seletivo.
 
-O projeto foi criado sem a ajuda dos professores, que darão o feedback quando finalizado.
+O projeto desenvolvido sem a ajuda dos professores, que darão o feedback quando finalizado.
 
 <br>
 
@@ -84,7 +84,7 @@ A estilização dos componentes foi feita com Styled Components, então fui busc
 <br>
 
 ## Filtrar por tipo
-A parte de desenvolver o filtro por tipo de pokemon foi um desafio grande. Precisei fazer novas conexões com a Api em outros endpoints e pratiquei bastante os métodos de array para manipular os dados.
+A parte de desenvolver o filtro por tipo de pokemon foi um desafio grande. Precisei fazer novas conexões com a Api em novos endpoints e usei bastante os métodos de array para manipular os dados. 
 
 <br>
 
