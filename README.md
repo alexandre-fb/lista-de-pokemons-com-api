@@ -61,9 +61,11 @@ O projeto foi criado sem a ajuda dos professores, que darão o feedback quando f
 ### Cronograma
 Para organizar as ideias iniciais decidi criar um cronograma das fases do projeto. Ao longo do trabalho isso ajudou a retomar o foco algumas vezes, quando via que estava pensando em etapas mais adiantadas. O cronograma pode ser acessado 👉 [aqui.](https://peaceful-hedge-e9c.notion.site/Teste-t-cnico-DevQuest-PokeAPI-445a8680e0384971a8e8da0699d5aea8) 
 
+<br>
+
 ## Design
 
-O primeiro desafio que encontrei foi de organizar as informações e o layout. Meu primeiro passo foi partir para o Figma e criar as versões desktop, mobile, dark e light.
+O primeiro passo foi organizar as informações e o layout. No Figma criei as versões desktop, mobile, dark e light, cuidando para atender todos os requisitos.
 
 O projeto do Figma pode ser acessado 👉 [aqui.](https://www.figma.com/file/rZC8ZGYdF8kXDjEG6rEQes/Teste-T%C3%A9cnico-DevQuest---API-Pokemon?node-id=0%3A1)
 
