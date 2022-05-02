@@ -83,6 +83,11 @@ A estilização dos componentes foi feita com Styled Components, então fui busc
 
 <br>
 
+## Filtrar por tipo
+A parte de desenvolver o filtro por tipo de pokemon foi um desafio grande. Precisei fazer novas conexões com a Api em outros endpoints e pratiquei bastante os métodos de array para manipular os dados.
+
+<br>
+
 # Rodar o projeto
 
 Para rodar o projeto basta fazer um clone do repositorio, abrir o terminal no VS Code e inserir os comandos 'npm Install' e depois 'npm start'.
