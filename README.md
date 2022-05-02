@@ -78,6 +78,6 @@ A estilização dos componentes foi feita com Styled Components, então fui busc
 
 <br>
 
-# Andamento do projeto
+## Rodar o projeto
 
-O projeto encontra-se com os requisitos básicos prontos. A meta é ainda implementar a funcionalidade de filtrar por tipo de pokemon.
+Para rodar o projeto basta fazer um clone do repositorio e no terminal inserir os comandos 'NPM Install' e depois 'NPM start'
