@@ -6,7 +6,7 @@ O projeto foi criado sem a ajuda dos professores, que darão o feedback quando f
 
 <br>
 
-## Técnologias e ferramentas utilizadas
+## Tecnologias e ferramentas utilizadas
 
 - Figma;
 - Poke Api;
@@ -58,11 +58,16 @@ O projeto foi criado sem a ajuda dos professores, que darão o feedback quando f
 
 # Desafios encontrados
 
+### Cronograma
+Para organizar as ideias iniciais decidi criar um cronograma das fases do projeto. Ao longo do trabalho isso ajudou a retomar o foco algumas vezes, quando via que estava pensando em etapas mais adiantadas. O cronograma pode ser acessado 👉 [aqui.](https://peaceful-hedge-e9c.notion.site/Teste-t-cnico-DevQuest-PokeAPI-445a8680e0384971a8e8da0699d5aea8) 
+
+<br>
+
 ## Design
 
-O primeiro desafio que encontrei foi de organizar as informações e o layout. Meu primeiro passo foi partir para o Figma e criar as versões desktop, mobile, dark e light.
+O primeiro passo foi organizar as informações e o layout. No Figma criei as versões desktop, mobile, dark e light, cuidando para atender todos os requisitos.
 
-O projeto do Figma pode ser acessado 👉 [aqui.](https://exemplo.com/)
+O projeto do Figma pode ser acessado 👉 [aqui.](https://www.figma.com/file/rZC8ZGYdF8kXDjEG6rEQes/Teste-T%C3%A9cnico-DevQuest---API-Pokemon?node-id=0%3A1)
 
 <br>
 
@@ -78,6 +83,11 @@ A estilização dos componentes foi feita com Styled Components, então fui busc
 
 <br>
 
-## Rodar o projeto
+## Filtrar por tipo
+A parte de desenvolver o filtro por tipo de pokemon foi um desafio grande. Precisei fazer novas conexões com a Api em outros endpoints e pratiquei bastante os métodos de array para manipular os dados.
 
-Para rodar o projeto basta fazer um clone do repositorio e no terminal inserir os comandos 'NPM Install' e depois 'NPM start'
+<br>
+
+# Rodar o projeto
+
+Para rodar o projeto basta fazer um clone do repositorio, abrir o terminal no VS Code e inserir os comandos 'npm Install' e depois 'npm start'.
