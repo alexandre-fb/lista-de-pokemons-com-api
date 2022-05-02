@@ -9,7 +9,7 @@ const TypePokemonFilter = ({ setTypeSelected, themeData, listTypeNames }) => {
     <Container themeData={themeData}>
       <p>Selecione o tipo de pokemon:</p>
       <select onChange={handleChange}>
-        <option>Selecione</option>
+        <option value="todos">Selecione</option>
         <option value="todos">Todos</option>
         {listTypeNames.map((name, index) => (
           <option key={index} value={name}>
