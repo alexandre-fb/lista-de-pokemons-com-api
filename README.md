@@ -78,6 +78,6 @@ A estilização dos componentes foi feita com Styled Components, então fui busc
 
 <br>
 
-## Rodar o projeto
+# Rodar o projeto
 
-Para rodar o projeto basta fazer um clone do repositorio e no terminal inserir os comandos 'NPM Install' e depois 'NPM start'
+Para rodar o projeto basta fazer um clone do repositorio, abrir o terminal no VS Code e inserir os comandos 'npm Install' e depois 'npm start'.
