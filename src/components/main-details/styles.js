@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Title } from "../title/index.js";
-import { PrimaryButton } from "../primary-button";
 
 //==============Container================
 
@@ -24,10 +23,4 @@ export const Name = styled.h2.attrs({ as: Title })`
   font-size: 2rem;
   margin-bottom: 50px;
   color: ${({ themeData }) => themeData.colors.blueToYellow};
-`;
-
-//==============ButtonBackHome================
-
-export const ButtonBackHome = styled.button.attrs({ as: PrimaryButton })`
-  margin-bottom: 50px;
 `;

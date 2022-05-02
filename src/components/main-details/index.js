@@ -2,16 +2,17 @@ import { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ThemeContext } from "../../contexts/theme-context";
 import { getPokemonsData, getPokemonAbilities } from "../../services/pokemons";
-import { Container, Name, ButtonBackHome } from "./styles";
+import { Container, Name } from "./styles";
 import { GridData } from "./grid-data";
 import { Loading } from "../loading";
+import { PrimaryButton } from "../primary-button";
 
 const MainDetails = () => {
-  const { themeData } = useContext(ThemeContext)
+  const { themeData } = useContext(ThemeContext);
   const { name } = useParams();
 
-  const [ pokemonData, setPokemonData ] = useState({});
-  const [ loading, setLoading ] = useState(true);
+  const [pokemonData, setPokemonData] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchPokemonData() {
@@ -51,7 +52,7 @@ const MainDetails = () => {
           <img src={pokemonData.image} alt={pokemonData.name} />
           <GridData pokemonData={pokemonData} />
           <Link to="/">
-            <ButtonBackHome>Voltar para Home</ButtonBackHome>
+            <PrimaryButton>Voltar para Home</PrimaryButton>
           </Link>
         </Container>
       )}

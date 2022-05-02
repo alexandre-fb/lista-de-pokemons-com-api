@@ -3,12 +3,11 @@ import { MainHome } from "../components/main-home";
 import { Footer } from "../components/footer";
 
 const Home = () => {
-
   return (
     <>
-        <Header/>
-        <MainHome />
-        <Footer />
+      <Header />
+      <MainHome />
+      <Footer />
     </>
   );
 };

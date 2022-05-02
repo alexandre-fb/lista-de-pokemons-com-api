@@ -63,6 +63,8 @@ export const DataBox = styled.article`
   }
 `;
 
+//========Title==========
+
 export const Title = styled.h3`
   width: 125px;
   height: 40px;
@@ -74,6 +76,8 @@ export const Title = styled.h3`
   text-align: center;
   line-height: 36px;
 `;
+
+//========MovesContent==========
 
 export const MovesContent = styled.p`
   font-family: "Mansalva", cursive;

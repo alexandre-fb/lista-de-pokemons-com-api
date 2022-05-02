@@ -15,4 +15,20 @@ async function getPokemonAbilities(url) {
   return await response.json();
 }
 
-export { getPokemonsList, getPokemonsData, getPokemonAbilities };
+async function getTypesList() {
+  const response = await fetch("https://pokeapi.co/api/v2/type");
+  return await response.json();
+}
+
+async function getTypeData(url) {
+  const response = await fetch(url);
+  return await response.json();
+}
+
+export {
+  getPokemonsList,
+  getPokemonsData,
+  getPokemonAbilities,
+  getTypesList,
+  getTypeData,
+};

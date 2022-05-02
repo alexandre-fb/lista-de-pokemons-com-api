@@ -3,8 +3,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../../contexts/theme-context";
 
 const GridData = ({ pokemonData }) => {
-
-  const { themeData } = useContext(ThemeContext)
+  const { themeData } = useContext(ThemeContext);
 
   return (
     <Container>

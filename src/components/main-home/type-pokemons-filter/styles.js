@@ -14,7 +14,7 @@ export const Container = styled.section`
   }
 
   p {
-    color: ${({ themeData }) => themeData.colors.blackToWhite}
+    color: ${({ themeData }) => themeData.colors.blackToWhite};
   }
 
   select {

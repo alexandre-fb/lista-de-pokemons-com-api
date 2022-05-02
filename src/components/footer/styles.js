@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-    text-align: center;
-    padding: 20px;
-    overflow-x: hidden;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+  margin-top: 30px;
 
-    p {
-        border-top: 1px solid #cdcdcd;
-        padding: 15px;
-        font-size: 0.8rem;
-        font-style: italic;
-        color: ${({themeData}) => themeData.colors.blackToWhite};
-    }
+  p {
+    border-top: 1px solid #cdcdcd;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: ${({ themeData }) => themeData.colors.blackToWhite};
+  }
 
-    a{
-        font-style: normal;
-        color: ${({themeData}) => themeData.colors.blueToYellow};
-        text-decoration: none;
-    }
-` 
+  a {
+    font-style: normal;
+    color: ${({ themeData }) => themeData.colors.blueToYellow};
+    text-decoration: none;
+  }
+`;
