@@ -15,7 +15,7 @@ import { PrimaryButton } from "../buttons/primary-button";
 const MainHome = () => {
   const { themeData } = useContext(ThemeContext);
   const [loading, setLoading] = useState(true);
-  const [amountOfCardsToShow, setAmountOfCardsToShow] = useState(0);
+  const [amountOfCardsToShow, setAmountOfCardsToShow] = useState(10);
   const [allPokemonsData, setAllPokemonsData] = useState([]);
   const [pokemonsTypeSelectedData, setPokemonsTypeSelectedData] = useState([]);
   const [pokemonsToShow, setPokemonsToShow] = useState([]);
@@ -27,7 +27,7 @@ const MainHome = () => {
     async function fetchAllPokemonsData() {
       if (typeSelected !== "todos") return;
 
-      const apiGeneralData = await getPokemonsList(paginationLimit, amountOfCardsToShow);
+      const apiGeneralData = await getPokemonsList(paginationLimit, amountOfCardsToShow - 10);
       const promisesAllPokemonsData = apiGeneralData.results.map((pokemon) =>
         getPokemonsData(pokemon.name)
       );
@@ -46,8 +46,6 @@ const MainHome = () => {
 
     fetchAllPokemonsData();
   }, [amountOfCardsToShow, typeSelected]);
-
-console.log('allPokemonsData',allPokemonsData)
 
   useEffect(() => {
     async function fetchTypesPokemonsData() {
@@ -111,8 +109,8 @@ console.log('allPokemonsData',allPokemonsData)
   }, [pokemonsToShow]);
 
   useEffect(() => {
-    typeSelected === 'todos' ? setAmountOfCardsToShow(0) : setAmountOfCardsToShow(10);
-    setAllPokemonsData([])
+    setAmountOfCardsToShow(10);
+    setAllPokemonsData([]);
   }, [typeSelected]);
 
   const handleShowMoreClick = () => {
