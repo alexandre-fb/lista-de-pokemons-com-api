@@ -1,4 +1,4 @@
-# Pokedex usand Poke Api
+# Pokedex usando Poke Api
 
 Este projeto faz parte do desafio final do curso DevQuest simulando um teste técnico de processo seletivo.
 
