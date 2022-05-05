@@ -5,7 +5,7 @@ import { getPokemonsData, getPokemonAbilities } from "../../services/pokemons";
 import { Container, Name } from "./styles";
 import { GridData } from "./grid-data";
 import { Loading } from "../loading";
-import { PrimaryButton } from "../primary-button";
+import { PrimaryButton } from "../buttons/primary-button";
 
 const MainDetails = () => {
   const { themeData } = useContext(ThemeContext);

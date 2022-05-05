@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import imageButton from "../../assets/images/btn.svg";
+import imageButton from "../../../assets/images/btn.svg";
 
 const PrimaryButton = styled.button`
   width: 180px;

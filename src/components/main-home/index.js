@@ -10,7 +10,7 @@ import {
 import { ThemeContext } from "../../contexts/theme-context";
 import { Loading } from "../loading";
 import { Container, PokemonTypeName } from "./styles";
-import { PrimaryButton } from "../primary-button";
+import { PrimaryButton } from "../buttons/primary-button";
 
 const MainHome = () => {
   const { themeData } = useContext(ThemeContext);
