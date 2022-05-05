@@ -15,23 +15,24 @@ import { PrimaryButton } from "../buttons/primary-button";
 const MainHome = () => {
   const { themeData } = useContext(ThemeContext);
   const [loading, setLoading] = useState(true);
-  const [amountOfCardsToShow, setAmountOfCardsToShow] = useState(10);
+  const [amountOfCardsToShow, setAmountOfCardsToShow] = useState(0);
   const [allPokemonsData, setAllPokemonsData] = useState([]);
   const [pokemonsTypeSelectedData, setPokemonsTypeSelectedData] = useState([]);
   const [pokemonsToShow, setPokemonsToShow] = useState([]);
   const [typeSelected, setTypeSelected] = useState("todos");
   const [listTypeNames, setListTypeNames] = useState([]);
+  const paginationLimit = 10;
 
   useEffect(() => {
     async function fetchAllPokemonsData() {
       if (typeSelected !== "todos") return;
 
-      const apiGeneralData = await getPokemonsList(amountOfCardsToShow);
+      const apiGeneralData = await getPokemonsList(paginationLimit, amountOfCardsToShow);
       const promisesAllPokemonsData = apiGeneralData.results.map((pokemon) =>
         getPokemonsData(pokemon.name)
       );
       const apiAllPokemonsData = await Promise.all(promisesAllPokemonsData);
-      const allPokemonsData = apiAllPokemonsData.map((pokemon) => {
+      const paginationPokemonsData = apiAllPokemonsData.map((pokemon) => {
         return {
           name: pokemon.name,
           image: pokemon.sprites.other.dream_world.front_default,
@@ -40,11 +41,13 @@ const MainHome = () => {
         };
       });
 
-      setAllPokemonsData(allPokemonsData);
+      setAllPokemonsData([...allPokemonsData, ...paginationPokemonsData]);
     }
 
     fetchAllPokemonsData();
   }, [amountOfCardsToShow, typeSelected]);
+
+console.log('allPokemonsData',allPokemonsData)
 
   useEffect(() => {
     async function fetchTypesPokemonsData() {
@@ -108,7 +111,8 @@ const MainHome = () => {
   }, [pokemonsToShow]);
 
   useEffect(() => {
-    setAmountOfCardsToShow(10);
+    typeSelected === 'todos' ? setAmountOfCardsToShow(0) : setAmountOfCardsToShow(10);
+    setAllPokemonsData([])
   }, [typeSelected]);
 
   const handleShowMoreClick = () => {

@@ -1,7 +1,7 @@
 const urlBasePokeApi = "https://pokeapi.co/api/v2/pokemon";
 
-async function getPokemonsList(amount) {
-  const response = await fetch(`${urlBasePokeApi}/?limit=${amount}`);
+async function getPokemonsList(limit, offset) {
+  const response = await fetch(`${urlBasePokeApi}/?limit=${limit}&offset=${offset}`);
   return await response.json();
 }
 
