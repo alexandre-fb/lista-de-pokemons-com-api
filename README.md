@@ -1,4 +1,4 @@
-# Lista de pokemons usando a Poke Api
+# Pokedex usand Poke Api
 
 Este projeto faz parte do desafio final do curso DevQuest simulando um teste técnico de processo seletivo.
 
