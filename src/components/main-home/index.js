@@ -27,7 +27,8 @@ const MainHome = () => {
     async function fetchAllPokemonsData() {
       if (typeSelected !== "todos") return;
 
-      const apiGeneralData = await getPokemonsList(paginationLimit, amountOfCardsToShow - 10);
+      const apiGeneralData = await getPokemonsList(paginationLimit, amountOfCardsToShow - 10
+      );
       const promisesAllPokemonsData = apiGeneralData.results.map((pokemon) =>
         getPokemonsData(pokemon.name)
       );
@@ -50,7 +51,12 @@ const MainHome = () => {
   useEffect(() => {
     async function fetchTypesPokemonsData() {
       const apiTypesList = await getTypesList();
-      const listTypeNames = await apiTypesList.results.map((type) => type.name);
+      const listAllTypeNames = await apiTypesList.results.map(
+        (type) => type.name
+      );
+      const listTypeNames = await listAllTypeNames.filter(
+        (name) => name !== "unknown" && name !== "shadow"
+      );
 
       setListTypeNames(listTypeNames);
 
