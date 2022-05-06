@@ -1,8 +1,13 @@
 # Pokedex usando Poke Api
 
+## Link de acesso
+<a href="https://lista-de-pokemons-com-api.vercel.app/" target="_blank">
+
+## Apresentação
+
 Este projeto faz parte do desafio final do curso DevQuest simulando um teste técnico de processo seletivo.
 
-O projeto desenvolvido sem a ajuda dos professores, que darão o feedback quando finalizado.
+O projeto foi desenvolvido sem a ajuda dos professores, que deram o feedback quando finalizado.
 
 <br>
 
