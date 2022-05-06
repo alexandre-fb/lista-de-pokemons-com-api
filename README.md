@@ -1,7 +1,7 @@
 # Pokedex usando Poke Api
 
 ## Link de acesso
-<a href="https://lista-de-pokemons-com-api.vercel.app/" target="_blank">
+<a href="https://lista-de-pokemons-com-api.vercel.app/" target="_blank">👉 Pokedex</a>
 
 ## Apresentação
 
