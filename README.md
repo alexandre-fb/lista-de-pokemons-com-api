@@ -93,7 +93,7 @@ A estilização dos componentes foi feita com Styled Components, então fui busc
 ### Filtrar por tipo
 A parte de desenvolver o filtro por tipo de pokemon foi um desafio grande. Precisei fazer novas conexões com a Api em novos endpoints e usei bastante os métodos de array para manipular os dados. 
 
+<br>
+
 ## Alterações após o feedback dos professores
-Após o feedback dos professores, alterei a forma de requisição da lista dos pokemons ao clicar em "mostrar mais". Inicialmente não estava colocando o valor de 'offset', o que fazia com que toda requisição buscasse toda a lista novemente. Para corrigir isso, incluí o 'offset' e fui acrescentando à lista dos Pokemons que já haviam sido buscados somente os dados novos, o que ajudou muito na performance da aplicação.
-
-
+Após o feedback dos professores alterei a forma de requisição da lista dos pokemons ao clicar em "mostrar mais". Inicialmente não estava colocando o valor de 'offset', o que fazia com que toda requisição buscasse toda a lista novemente. Para corrigir isso incluí o 'offset', e fui acrescentando à lista dos Pokemons que já haviam sido buscados somente os dados novos, o que ajudou muito na performance da aplicação.
